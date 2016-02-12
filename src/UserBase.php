@@ -18,6 +18,7 @@ abstract class UserBase
         'cookieName'      => 'auto',
         'cookiePath'      => '/',
         'cookieHost'      => false,
+        'sessionTime'     => 3600,
         'userTableName'   => 'Users',
         'userSession'     => 'userData',
         'userDefaultData' => array(
