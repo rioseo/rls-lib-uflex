@@ -253,6 +253,13 @@ class User extends UserBase
             $this->cookie->setPath($this->config->cookiePath);
             $this->cookie->setLifetime($this->config->cookieTime);
 
+            // configure session cookie
+            session_set_cookie_params(
+                $this->config->cookieTime,
+                $this->config->cookiePath,
+                $this->config->cookieHost
+            );
+
             // Instantiate the session
             $this->session = new Session($this->config->userSession, $this->log);
 
